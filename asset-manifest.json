@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/advent-calendar/static/css/main.e88a0844.css",
-    "main.js": "/advent-calendar/static/js/main.9baef543.js",
-    "static/js/453.a46c314f.chunk.js": "/advent-calendar/static/js/453.a46c314f.chunk.js",
-    "static/media/christmas-winter.mp3": "/advent-calendar/static/media/christmas-winter.b7dbde60122c8f110d9b.mp3",
-    "static/media/christmas-background.jpg": "/advent-calendar/static/media/christmas-background.809fcfe766523bfa3e99.jpg",
-    "index.html": "/advent-calendar/index.html",
-    "main.e88a0844.css.map": "/advent-calendar/static/css/main.e88a0844.css.map",
-    "main.9baef543.js.map": "/advent-calendar/static/js/main.9baef543.js.map",
-    "453.a46c314f.chunk.js.map": "/advent-calendar/static/js/453.a46c314f.chunk.js.map"
+    "main.css": "/christmas-advent/static/css/main.88983433.css",
+    "main.js": "/christmas-advent/static/js/main.6b489539.js",
+    "static/js/453.a46c314f.chunk.js": "/christmas-advent/static/js/453.a46c314f.chunk.js",
+    "static/media/christmas-winter.mp3": "/christmas-advent/static/media/christmas-winter.b7dbde60122c8f110d9b.mp3",
+    "static/media/christmas-background.jpg": "/christmas-advent/static/media/christmas-background.809fcfe766523bfa3e99.jpg",
+    "index.html": "/christmas-advent/index.html",
+    "main.88983433.css.map": "/christmas-advent/static/css/main.88983433.css.map",
+    "main.6b489539.js.map": "/christmas-advent/static/js/main.6b489539.js.map",
+    "453.a46c314f.chunk.js.map": "/christmas-advent/static/js/453.a46c314f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e88a0844.css",
-    "static/js/main.9baef543.js"
+    "static/css/main.88983433.css",
+    "static/js/main.6b489539.js"
   ]
 }
