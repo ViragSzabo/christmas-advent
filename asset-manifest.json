@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/advent-calendar/static/css/main.e88a0844.css",
+    "main.js": "/advent-calendar/static/js/main.9baef543.js",
+    "static/js/453.a46c314f.chunk.js": "/advent-calendar/static/js/453.a46c314f.chunk.js",
+    "static/media/christmas-winter.mp3": "/advent-calendar/static/media/christmas-winter.b7dbde60122c8f110d9b.mp3",
+    "static/media/christmas-background.jpg": "/advent-calendar/static/media/christmas-background.809fcfe766523bfa3e99.jpg",
+    "index.html": "/advent-calendar/index.html",
+    "main.e88a0844.css.map": "/advent-calendar/static/css/main.e88a0844.css.map",
+    "main.9baef543.js.map": "/advent-calendar/static/js/main.9baef543.js.map",
+    "453.a46c314f.chunk.js.map": "/advent-calendar/static/js/453.a46c314f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e88a0844.css",
+    "static/js/main.9baef543.js"
+  ]
+}
