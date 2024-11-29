@@ -13,6 +13,16 @@
   }
 }
 
+@media (max-width: 600px) {
+  .calendar {
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on mobile */
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

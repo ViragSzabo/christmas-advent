@@ -5,6 +5,7 @@ import TaskModal from "./TaskModal";
 import jingleSound from "../assets/christmas-winter.mp3";
 import Countdown from "./Countdown";
 import Snowflakes from "./Snowflakes";
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 
 const AdventCalendar = () => {
   const today = new Date();
@@ -13,6 +14,7 @@ const AdventCalendar = () => {
   const [selectedTask, setSelectedTask] = useState(null);
   const audioRef = useRef(null);
   const [hoveredDay, setHoveredDay] = useState(null); // Track the hovered window
+  const shareUrl = window.location.href; // The URL of the page
 
   // Play jingle sound when opening a task
   const playJingle = () => {
@@ -48,7 +50,22 @@ const AdventCalendar = () => {
 
   return (
     <div className="calendar">
-      <h1>🎄 Christmas Advent Calendar 🎄</h1>
+      <div className="header">
+        <h1>🎄 Christmas Advent Calendar 🎄</h1>
+
+        {/* Social Share Buttons */}
+        <div className="social-share-buttons">
+          <FacebookShareButton url={shareUrl} className="share-button">
+            Share on Facebook
+          </FacebookShareButton>
+          <TwitterShareButton url={shareUrl} className="share-button">
+            Share on Twitter
+          </TwitterShareButton>
+          <WhatsappShareButton url={shareUrl} className="share-button">
+            Share on WhatsApp
+          </WhatsappShareButton>
+        </div>
+      </div>
 
       {/* Countdown and Snowflakes */}
       <Countdown />
