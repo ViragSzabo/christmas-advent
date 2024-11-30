@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/Calendar.css";
 
 const Countdown = () => {
-  const [countdownDate, setCountdownDate] = useState(new Date(2024, 11, 1)); // December 1st
+  const [countdownDate] = useState(new Date(2024, 11, 1)); // December 1st
   const [currentCountdown, setCurrentCountdown] = useState("");
   const [isDecember, setIsDecember] = useState(false);
 
@@ -25,7 +25,7 @@ const Countdown = () => {
       const daysUntilDecember = calculateCountdown(countdownDate);
       setCurrentCountdown(daysUntilDecember);
     }
-  }, [currentCountdown]);
+  }, [currentCountdown, countdownDate]);
 
   return (
     <div className="countdown-container">

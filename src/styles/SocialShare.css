@@ -1,0 +1,59 @@
+.subtitle {
+  color:#365899
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #555;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.share-button:hover {
+  transform: scale(1.1);
+  background-color: #f3f3f3;
+  border-color: #ddd;
+}
+
+.social-icon {
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.facebook-icon {
+  color: #4267b2;
+}
+
+.facebook-icon:hover {
+  color: #365899;
+}
+
+.twitter-icon {
+  color: #1da1f2;
+}
+
+.twitter-icon:hover {
+  color: #0d95e8;
+}
+
+.whatsapp-icon {
+  color: #25d366;
+}
+
+.whatsapp-icon:hover {
+  color: #1ebe57;
+}

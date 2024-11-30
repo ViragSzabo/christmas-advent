@@ -1,43 +1,54 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "../styles/Calendar.css";
 import { tasks } from "../data/tasks";
 import TaskModal from "./TaskModal";
-import jingleSound from "../assets/christmas-winter.mp3";
 import Countdown from "./Countdown";
 import Snowflakes from "./Snowflakes";
-import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
+import JinglePlayer from "./JinglePlayer";
+import SocialShare from "./SocialShare";
+import AudioPlayer from "./AudioPlayer";
 
 const AdventCalendar = () => {
   const today = new Date();
   const currentDay = today.getDate();
-  const currentMonth = today.getMonth(); // 0 = January, 11 = December
+  const currentMonth = today.getMonth();
   const [selectedTask, setSelectedTask] = useState(null);
-  const audioRef = useRef(null);
+  const [shouldPlayJingle, setShouldPlayJingle] = useState(false);
   const [hoveredDay, setHoveredDay] = useState(null); // Track the hovered window
-  const shareUrl = window.location.href; // The URL of the page
+  const shareUrl = window.location.href;
+  const isDecember = currentMonth === 11;
+  const [openedWindows, setOpenedWindows] = useState(() => {
+    const stored = localStorage.getItem("openedWindows");
+    return stored ? JSON.parse(stored) : [];
+  });
 
-  // Play jingle sound when opening a task
-  const playJingle = () => {
-    if (audioRef.current) {
-      audioRef.current.pause(); // Stop any current audio
-      audioRef.current.currentTime = 0; // Reset audio
-      audioRef.current.play(); // Play new audio
-    }
+  const fallbackTask = {
+    title: "Surprise!",
+    description: "There's no specific task for today. Take time to spread joy and enjoy the holiday spirit! 🎄✨",
   };
 
-  // Open the task for the selected day
+  const isUnlocked = (day) => isDecember && day <= currentDay;
+  const isAlreadyOpened = (day) => openedWindows.includes(day);
+
+  // Open and save the task for the selected day
   const openTask = (day) => {
-    if (currentMonth === 11 && day <= currentDay) {
-      setSelectedTask(tasks[day - 1]);
-      playJingle();
-    } else {
-      setSelectedTask(null);
+    if (isUnlocked(day)) {
+      const task = tasks?.[day - 1] || fallbackTask;
+      setSelectedTask(task);
+      setShouldPlayJingle(true);
+      setOpenedWindows((prev) => {
+        const updated = [...prev, day];
+        localStorage.setItem("openedWindows", JSON.stringify(updated));
+        return updated;
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   // Close the task modal
   const closeTask = () => {
     setSelectedTask(null);
+    setShouldPlayJingle(false);
   };
 
   // Get the number of days until a window opens
@@ -45,64 +56,54 @@ const AdventCalendar = () => {
     if (currentMonth === 11 && day > currentDay) {
       return day - currentDay;
     }
-    return 0;
+    return day;
   };
 
   return (
     <div className="calendar">
       <div className="header">
         <h1>🎄 Christmas Advent Calendar 🎄</h1>
-
-        {/* Social Share Buttons */}
-        <div className="social-share-buttons">
-          <FacebookShareButton url={shareUrl} className="share-button">
-            Share on Facebook
-          </FacebookShareButton>
-          <TwitterShareButton url={shareUrl} className="share-button">
-            Share on Twitter
-          </TwitterShareButton>
-          <WhatsappShareButton url={shareUrl} className="share-button">
-            Share on WhatsApp
-          </WhatsappShareButton>
-        </div>
+        <SocialShare shareUrl={shareUrl} />
       </div>
 
-      {/* Countdown and Snowflakes */}
+      <AudioPlayer />
       <Countdown />
       <Snowflakes />
 
       <div className="grid">
         {Array.from({ length: 24 }, (_, i) => {
-          const daysUntilOpen = getDaysUntilOpen(i + 1);
+          const day = i + 1;
+          const daysUntilOpen = getDaysUntilOpen(day);
           return (
             <div
               key={i}
-              className={`window ${currentMonth === 11 && i + 1 <= currentDay ? "unlocked" : "locked"}`}
-              onClick={() => currentMonth === 11 && i + 1 <= currentDay && openTask(i + 1)}
+              className={`window ${isAlreadyOpened(day)
+                  ? "opened"
+                  : isUnlocked(day)
+                    ? "unlocked"
+                    : "locked"
+                }`}
+              onClick={() => openTask(day)}
               onMouseEnter={() => setHoveredDay(i + 1)}
               onMouseLeave={() => setHoveredDay(null)}
               role="button"
               aria-label={
-                i + 1 <= currentDay
-                  ? `Day ${i + 1} unlocked. Click to open.`
-                  : `Day ${i + 1} locked. Opens in ${daysUntilOpen} day${daysUntilOpen > 1 ? "s" : ""}.`
+                isUnlocked(day)
+                  ? `Day ${day} ${isAlreadyOpened(day) ? "already opened" : "unlocked"}. Click to open.`
+                  : `Day ${day} locked. Opens in ${daysUntilOpen} day${daysUntilOpen > 1 ? "s" : ""}.`
               }
             >
-              {i + 1}
-
-              {hoveredDay === i + 1 && i + 1 > currentDay && currentMonth === 11 && (
+              {day}
+              {hoveredDay === day && !isUnlocked(day) && (
                 <div className="tooltip">
-                  🎅 Hold on! This window will unlock in {daysUntilOpen} day
-                  {daysUntilOpen > 1 ? "s" : ""}.
+                  🎅 Hold on! Come back in {daysUntilOpen} day{daysUntilOpen > 1 ? "s" : ""}.
                 </div>
               )}
             </div>
           );
         })}
       </div>
-
-      <audio ref={audioRef} src={jingleSound} />
-
+      <JinglePlayer shouldPlay={shouldPlayJingle} />
       {selectedTask && <TaskModal task={selectedTask} onClose={closeTask} />}
     </div>
   );
