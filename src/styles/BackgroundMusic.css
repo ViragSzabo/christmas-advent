@@ -4,15 +4,15 @@
     right: 10px;
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
   }
   
   .music-player button {
     background-color: transparent;
     border: none;
-    padding: 10px;
-    font-size: 24px; 
+    padding: 5px;
+    font-size: 20px; 
     cursor: pointer;
     color: white;
   }
@@ -22,5 +22,5 @@
   }  
 
   .music-player i {
-    font-size: 30px; 
+    font-size: 25px; 
   }
