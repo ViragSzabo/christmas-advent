@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/christmas-advent/static/css/main.b00847f5.css",
-    "main.js": "/christmas-advent/static/js/main.c5c35286.js",
+    "main.css": "/christmas-advent/static/css/main.713a19d6.css",
+    "main.js": "/christmas-advent/static/js/main.c58542f9.js",
     "static/js/453.a46c314f.chunk.js": "/christmas-advent/static/js/453.a46c314f.chunk.js",
     "static/media/christmas-winter.mp3": "/christmas-advent/static/media/christmas-winter.b7dbde60122c8f110d9b.mp3",
     "static/media/tale.mp3": "/christmas-advent/static/media/tale.3186bf9a4061d821e6dd.mp3",
     "static/media/christmas-background.jpg": "/christmas-advent/static/media/christmas-background.809fcfe766523bfa3e99.jpg",
     "index.html": "/christmas-advent/index.html",
-    "main.b00847f5.css.map": "/christmas-advent/static/css/main.b00847f5.css.map",
-    "main.c5c35286.js.map": "/christmas-advent/static/js/main.c5c35286.js.map",
+    "main.713a19d6.css.map": "/christmas-advent/static/css/main.713a19d6.css.map",
+    "main.c58542f9.js.map": "/christmas-advent/static/js/main.c58542f9.js.map",
     "453.a46c314f.chunk.js.map": "/christmas-advent/static/js/453.a46c314f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b00847f5.css",
-    "static/js/main.c5c35286.js"
+    "static/css/main.713a19d6.css",
+    "static/js/main.c58542f9.js"
   ]
 }
