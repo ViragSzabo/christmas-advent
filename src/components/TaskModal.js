@@ -19,7 +19,7 @@ const TaskModal = ({ task, onClose }) => {
       onKeyDown={handleKeyDown}
     >
       <div className="task-modal-content">
-        <h2 id="modal-title">Today's Task</h2>
+        <h2 id="modal-title">❄️ Task of the Day ❄️</h2>
         <p id="modal-description">{task}</p>
         <button onClick={onClose} className="close-button" aria-label="Close">
           Close

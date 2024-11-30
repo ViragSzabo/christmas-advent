@@ -10,6 +10,8 @@ const JinglePlayer = ({ shouldPlay }) => {
       jingleRef.current.pause();
       jingleRef.current.currentTime = 0;
       jingleRef.current.play().catch((error) => console.error("Audio playback failed:", error));
+    } else {
+      jingleRef.current.pause(); // Stop the music when shouldPlay is false
     }
   }, [shouldPlay]);
 

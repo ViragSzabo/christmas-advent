@@ -1,26 +1,32 @@
-.music-player {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-  }
-  
-  .music-player button {
-    background-color: transparent;
-    border: none;
-    padding: 5px;
-    font-size: 20px; 
-    cursor: pointer;
-    color: white;
-  }
-  
-  .music-player:hover {
-    background-color: #22211e;
-  }  
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
 
-  .music-player i {
-    font-size: 25px; 
-  }
+.music-player {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.music-player button {
+  background-color: transparent;
+  border: none;
+  padding: 3px;
+  font-size: 10px; 
+  cursor: pointer;
+  color: white;
+}
+
+.music-player:hover {
+  background-color: #22211e;
+}
+
+.music-player i {
+  font-size: 25px; 
+}
