@@ -18,9 +18,9 @@ const CalendarGrid = () => {
   });
 
   const fallbackTask = {
-    title: "Surprise!",
+    title: "Meglepetés!",
     description:
-      "There's no specific task for today. Take time to spread joy and enjoy the holiday spirit! 🎄✨",
+      "Élvezd ezt a csodálatos, varázslatos időszakot 🎄✨",
   };
 
   const isUnlocked = (day) => (isDecember && day <= currentDay);
@@ -88,8 +88,7 @@ const CalendarGrid = () => {
               {day}
               {hoveredDay === day && !isUnlocked(day) && (
                 <div className="tooltip">
-                  🎅 Hold on! Come back in {daysUntilOpen} day
-                  {daysUntilOpen > 1 ? "s" : ""}.
+                  🎅 Várj! Gyere vissza {daysUntilOpen} napon belül.
                 </div>
               )}
             </div>

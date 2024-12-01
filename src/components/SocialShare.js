@@ -5,7 +5,7 @@ import "../styles/SocialShare.css";
 
 const SocialShare = ({ shareUrl }) => (
   <div className="social-share">
-    <h3 className="subtitle">Spread the Holiday Cheer!</h3>
+    <h3 className="subtitle">Osszd meg az ünnepi örömöt!</h3>
     <div className="share-buttons">
       <FacebookShareButton url={shareUrl} className="share-button">
         <FaFacebook className="social-icon facebook-icon" />

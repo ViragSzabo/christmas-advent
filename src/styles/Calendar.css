@@ -260,3 +260,15 @@ h1 {
 .countdown.locked-soon {
   animation: pulse 1.5s infinite;
 }
+
+.download-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.download-link:hover {
+  color: #0056b3;
+}

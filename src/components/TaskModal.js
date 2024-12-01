@@ -19,10 +19,22 @@ const TaskModal = ({ task, onClose }) => {
       onKeyDown={handleKeyDown}
     >
       <div className="task-modal-content">
-        <h2 id="modal-title">❄️ Task of the Day ❄️</h2>
-        <p id="modal-description">{task}</p>
+        <h2 id="modal-title">❄️ Napi Feladat ❄️</h2>
+        <p id="modal-description">{task.text}</p>
+        {task.downloadLink ? (
+          <a
+            href={task.downloadLink}
+            download
+            className="download-link"
+            aria-label="Download file"
+          >
+            📥 Letöltés
+          </a>
+        ) : (
+          <p className="error-message">A fájl nem érhető el.</p>
+        )}
         <button onClick={onClose} className="close-button" aria-label="Close">
-          Close
+          Bezár
         </button>
       </div>
     </div>
@@ -30,7 +42,10 @@ const TaskModal = ({ task, onClose }) => {
 };
 
 TaskModal.propTypes = {
-  task: PropTypes.string.isRequired,
+  task: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    downloadLink: PropTypes.string,
+  }).isRequired,
   onClose: PropTypes.func.isRequired,
 };
 

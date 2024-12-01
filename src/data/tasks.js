@@ -1,26 +1,102 @@
 export const tasks = [
-    "Smile at a stranger and say hello.",
-    "Write down 3 things you love about yourself.",
-    "Compliment someone genuinely.",
-    "Ask someone how they’re doing and listen.",
-    "Share an uplifting quote online.",
-    "Leave a kind message in a public place.",
-    "Call a family member to show appreciation.",
-    "Explore a new local place.",
-    "Enjoy a cup of tea.",
-    "Try a new food or cuisine.",
-    "Say yes to something you'd usually turn down.",
-    "Dance around to your favorite song.",
-    "Talk to someone while waiting in line.",
-    "Share your favorite book recommendation.",
-    "Invite someone to coffee or a walk.",
-    "Reflect on a personal goal with a friend.",
-    "Spend time in nature, enjoying the quiet.",
-    "Reach out to someone you admire.",
-    "Exchange contact info with someone new.",
-    "Attend a festive event solo.",
-    "Unplug from social media for an hour.",
-    "Send a thoughtful message to a friend.",
-    "Reflect on connections you've built.",
-    "Celebrate your growth with loved ones."
-  ];  
+  // First Sunday
+  {
+    text: "Töltsd le és színezd ki az első adventi gyertyát!",
+    downloadLink: "/downloads/gyertya.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki ezt a negy díszt!",
+    downloadLink: "/downloads/diszek.png",
+  },
+  {
+    text: "Töltsd le és színezd ki a hóembert!",
+    downloadLink: "/downloads/hoember.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a szarvast!",
+    downloadLink: "/downloads/szarvas.png",
+  },
+  {
+    text: "Töltsd le és színezd ki Mikulás házát!",
+    downloadLink: "/downloads/mikulashaza.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a mikulás!",
+    downloadLink: "/downloads/mikulas.png",
+  },
+  {
+    text: "Töltsd le és színezd ki Mikulás ajándékait!",
+    downloadLink: "/downloads/mikulasajandek.jpg",
+  },
+  // Second Sunday
+  {
+    text: "Töltsd le és színezd ki a két adventi gyertyát!",
+    downloadLink: "/downloads/ketgyertya.png",
+  },
+  {
+    text: "Töltsd le és színezd ki a macskát!",
+    downloadLink: "/downloads/macska.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a tájképet a gömben!",
+    downloadLink: "/downloads/tajkep.png",
+  },
+  {
+    text: "Töltsd le és színezd ki a csengőt!",
+    downloadLink: "/downloads/csengo.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a két csengőt!",
+    downloadLink: "/downloads/ketcsengo.png",
+  },
+  {
+    text: "Töltsd le és színezd ki a koszorút!",
+    downloadLink: "/downloads/koszoru.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki az alvó kutyust!",
+    downloadLink: "/downloads/kutya.png",
+  },
+  // Third Sunday
+  {
+    text: "Töltsd le és színezd ki a három adventi gyertyát!",
+    downloadLink: "/downloads/haromgyertya.png",
+  },
+  {
+    text: "Töltsd le és színezd ki két zoknit tele finomsággal!",
+    downloadLink: "/downloads/zokni.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a karácsonyi készülődést!",
+    downloadLink: "/downloads/keszulodes.png",
+  },
+  {
+    text: "Töltsd le és színezd ki a karácsonyfát!",
+    downloadLink: "/downloads/karacsonyfa.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a három pingvint!",
+    downloadLink: "/downloads/pingvinek.png",
+  },
+  {
+    text: "Töltsd le és színezd ki a karácsonyi készülődést!",
+    downloadLink: "/downloads/diszites.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki az állatokat!",
+    downloadLink: "/downloads/allatok.png",
+  },
+  // Fourth Sunday
+  {
+    text: "Töltsd le és színezd ki a négy adventi gyertyát!",
+    downloadLink: "/downloads/negygyertya.jpg",
+  },
+  {
+    text: "Töltsd le és színezd ki a macikat!",
+    downloadLink: "/downloads/maci.webp",
+  },
+  {
+    text: "Töltsd le és színezd ki a házat!",
+    downloadLink: "/downloads/haz.webp",
+  }
+];

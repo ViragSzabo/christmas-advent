@@ -11,7 +11,7 @@ const AdventCalendar = () => {
   return (
     <div className="calendar">
       <div className="header">
-        <h1>🎄 Christmas Advent Calendar 🎄</h1>
+        <h1>🎄 Karácsonyi Advent Naptár 🎄</h1>
         <SocialShare shareUrl={shareUrl} />
       </div>
       <AudioPlayer />

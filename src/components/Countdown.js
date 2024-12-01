@@ -31,8 +31,8 @@ const Countdown = () => {
     <div className="countdown-container">
       <h2 className="countdown-text">
         {isDecember
-          ? `🎄 ${currentCountdown} Days Until Christmas 🎄`
-          : `⏳ ${currentCountdown} Days Until December 1st ⏳`}
+          ? `🎄 ${currentCountdown} nap van hátra karácsonyig 🎄`
+          : `⏳ ${currentCountdown} nap van hátra December 1-ig ⏳`}
       </h2>
     </div>
   );
