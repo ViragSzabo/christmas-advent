@@ -13,7 +13,7 @@
     "react-share": "^5.1.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://ViragSzabo.github.io/christmas-advent",
+  "homepage": "https://viragszabo.github.io/christmas-advent/hun-advent",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
